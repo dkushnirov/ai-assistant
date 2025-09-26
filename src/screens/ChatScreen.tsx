@@ -69,10 +69,10 @@ export function ChatScreen() {
   }, []);
 
   return (
-    <div className="flex flex-col h-screen max-w-4xl mx-auto">
+    <div className="flex flex-col min-h-screen max-w-4xl mx-auto pb-[env(safe-area-inset-bottom)]">
       <Header />
       {/* Messages Container */}
-      <div className="flex-1 overflow-y-auto p-4 space-y-4">
+      <div className="flex-1 overflow-y-auto p-4 space-y-4 relative">
         {conversation.length === 0 ? (
           <WelcomeMessage />
         ) : (
